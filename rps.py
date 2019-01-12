@@ -16,6 +16,8 @@ if __name__ == "__main__":
         \n'''))
 #        if player != 1 or player != 2 or player != 3:
 #            print('Please insert a valid option')
+        if player <= 3 and player > 0:
+            player -= 1
         player_option = option[player]
         cpu_option = option[random.randint(0,2)]
         
@@ -23,7 +25,7 @@ if __name__ == "__main__":
             print('Draw')
         elif player_option == 'rock':
             if cpu_option == 'scissor':
-                print('You win! The CPU choose', cpu_option)
+                print('You win! The CPU choose', cpu_option , player_option)
             elif cpu_option == 'paper':
                 print('You lose! The CPU choose', cpu_option)
         elif player_option == 'paper':
